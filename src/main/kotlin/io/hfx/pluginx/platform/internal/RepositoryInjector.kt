@@ -17,6 +17,7 @@ object RepositoryInjector {
             handler.maven { repo ->
                 repo.name = resolved.name
                 repo.url = URI(resolved.url)
+                repo.isAllowInsecureProtocol = resolved.isAllowInsecureProtocol
 
                 if (!resolved.user.isNullOrBlank() && !resolved.password.isNullOrBlank()) {
                     repo.credentials {
