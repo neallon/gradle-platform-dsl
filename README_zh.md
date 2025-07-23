@@ -1,5 +1,7 @@
 # hfxPlatform Gradle 插件
 
+[![Gradle Plugin Portal](https://img.shields.io/maven-metadata/v?label=Gradle%20Plugin&metadataUrl=https://plugins.gradle.org/m2/io/github/neallon/platform-dsl/io.github.neallon.platform-dsl.gradle.plugin/maven-metadata.xml)](https://plugins.gradle.org/plugin/io.github.neallon.platform-dsl)
+
 > 🎯 统一简化 Gradle 仓库配置、发布配置与依赖注入，提供一致性的 DSL。
 
 ---
