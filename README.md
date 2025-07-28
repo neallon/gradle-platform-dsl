@@ -39,9 +39,7 @@ hfxPlatform {
         usePresetRepositories() // Injects repositories from gradle.properties
     }
     publishing {
-        repositories {
-            usePresetPublishingRepositories() // Injects publishing repositories
-        }
+        usePresetPublishingRepositories() // Injects publishing repositories
     }
 }
 ```

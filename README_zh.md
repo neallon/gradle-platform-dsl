@@ -37,9 +37,7 @@ hfxPlatform {
         usePresetRepositories() // 自动注入构建仓库
     }
     publishing {
-        repositories {
-            usePresetPublishingRepositories() // 自动注入发布仓库
-        }
+        usePresetPublishingRepositories() // 自动注入发布仓库
     }
 }
 ```
