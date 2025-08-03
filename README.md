@@ -25,7 +25,7 @@ It supports:
 ### Plugin DSL
 ```kotlin
 plugins {
-    id("io.github.neallon.platform-dsl") version "1.0.0"
+    id("io.github.neallon.platform-dsl") version "1.1.0"
 }
 ```
 
@@ -37,6 +37,14 @@ plugins {
 hfxPlatform {
     repositories {
         usePresetRepositories() // Injects repositories from gradle.properties
+        mavenCentral()
+        mavenLocal()
+        // custom Maven repo
+        maven {
+            name = "custom"
+            url = uri("http://repo.example.com/maven2")
+            allowInsecureProtocol = true
+        }
     }
     publishing {
         usePresetPublishingRepositories() // Injects publishing repositories
@@ -115,18 +123,6 @@ To apply repositories:
 To list tasks:
   ./gradlew tasks --group hfxPlatform
 ```
-
----
-
-## 📦 Plugin Info 插件信息
-
-| Name | Value |
-|------|-------|
-| Plugin ID | `io.github.neallon.platform-dsl` |
-| Version | `1.0.0` |
-| Compatible | Gradle 7.0+ |
-| DSL Support | Kotlin / Groovy |
-| Author | [HFX Open Platform](https://github.com/neallon/gradle-platform-dsl) |
 
 ---
 

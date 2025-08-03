@@ -23,7 +23,7 @@
 
 ```kotlin
 plugins {
-    id("io.github.neallon.platform-dsl") version "1.0.0"
+    id("io.github.neallon.platform-dsl") version "1.1.0"
 }
 ```
 
@@ -35,6 +35,14 @@ plugins {
 hfxPlatform {
     repositories {
         usePresetRepositories() // 自动注入构建仓库
+        mavenCentral()
+        mavenLocal()
+        // custom Maven repo
+        maven {
+            name = "custom"
+            url = uri("http://repo.example.com/maven2")
+            allowInsecureProtocol = true
+        }
     }
     publishing {
         usePresetPublishingRepositories() // 自动注入发布仓库
@@ -74,18 +82,6 @@ hfx.repo2.repo.url=...
 ```
 
 提供详细的配置说明与 ANSI 彩色提示。
-
----
-
-## 📦 插件信息
-
-| 名称 | 值 |
-|------|----|
-| 插件 ID | `io.github.neallon.platform-dsl` |
-| 最新版本 | `1.0.0` |
-| 兼容版本 | Gradle 7.0+ |
-| 支持 DSL | Kotlin / Groovy |
-| 作者 | [HFX Open Platform](https://github.com/neallon/gradle-platform-dsl) |
 
 ---
 
